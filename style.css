@@ -1,3 +1,33 @@
+/* Import custom fonts */
+
+@font-face {
+  font-family: "BrownFtv-Bold";
+  src:url("fonts/BrownFtv-Bold.otf");
+}
+@font-face {
+  font-family: "BrownFtv-Light";
+  src:url("fonts/BrownFtv-Light.otf");
+}
+@font-face {
+  font-family: "BrownFtv-Regular";
+  src:url("fonts/BrownFtv-Regular.otf");
+}
+
+/* Define colour palette */
+:root {
+  --green: #072620;
+  --blue: #19af97;
+  --msg-bg: #dfe9e4;
+  --bg: #f5f5f5;
+}
+
+/* Define styles */
+
+body {
+  background-color: var(--bg);
+  font-family: "BrownFtv-Regular";
+}
+
 h1 {
-  color: gold;
+  color: var(--blue);
 }
