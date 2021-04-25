@@ -30,7 +30,7 @@ body {
   background-color: var(--bg);
   background-image: url("img/motif.svg"),
                     url("img/motif.svg");
-  background-size: 7%, 7%;
+  background-size: 4em, 4em;
   background-repeat: repeat-y,
                      repeat-y;
   background-position: left top,
@@ -39,6 +39,7 @@ body {
 
 #container {
   width: 80%;
+  max-width: 75em;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -63,4 +64,23 @@ h1+hr {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#bouton-parcourir {
+  color: white;
+  background-color: var(--blue);
+  border-radius: 3px;
+  padding: 4px 20px 4px 20px;
+}
+
+form {
+  text-align: center;
+}
+
+form>* {
+  margin: 0 0 20px 0
 }

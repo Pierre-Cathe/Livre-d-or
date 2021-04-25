@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="style.css" rel="stylesheet" />
     <title>Marianne et Thibaut</title>
+    <script src="msg.js" async></script>
   </head>
   <body>
     <div id="container">
@@ -12,15 +13,24 @@
       <hr/>
       <p> Casse-couille… n’est pas une insulte. C’est ici l’histoire de l’arroseur arrosé. Une blague familiale veut que l’on utilise une adresse casse-couille.fr pour écrire anonymement ce qu’on pense sur tous les sujets !
   À vous de vous emparer de cette adresse pour écrire librement et sans censure des petits mots à Marianne et Thibaut. Ecrivez plusieurs fois, ajoutez, des photos, des images, ce que vous voulez….
-  Ce site sera révélé  et offert le 14 août à minuit !</p>
+  Ce site sera révélé et offert le 14 août à minuit !</p>
       <form action="" method="get" class="form">
         <div class="form">
-          <label for="name">Saisissez votre nom :</label>
+          <label for="name">Votre nom :</label>
           <input type="text" name="name" id="name" required>
         </div>
         <div class="form">
-          <label for="message">Saisissez votre message pour les mariés : </label>
+          <label for="message">Votre message pour les mariés : </label>
           <textarea name="message" id="message" required></textarea>
+        </div>
+        <div class="form">
+          <label for="image">
+            Joindre une photo (optionnel):
+          </label>
+          <label id="bouton-parcourir">
+            PARCOURIR
+            <input type="file" id="image" name="image" accept="image/jpeg, image/png">
+          </label>
         </div>
         <div class="form">
           <input type="submit" value="Envoyer !">
