@@ -25,6 +25,8 @@
 
 body {
   font-family: "BrownFtv-Regular";
+  text-align: justify;
+
   background-color: var(--bg);
   background-image: url("img/motif.svg"),
                     url("img/motif.svg");
@@ -44,6 +46,13 @@ body {
 
 h1 {
   color: var(--blue);
+  text-align: center;
+}
+
+h1+hr {
+  border: none;
+  border-top: 2px solid var(--blue);
+  width: 200px;
 }
 
 #banniere {
