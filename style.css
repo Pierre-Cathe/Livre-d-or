@@ -24,7 +24,7 @@
 /* Define styles */
 
 body {
-  font-family: "BrownFtv-Regular";
+  font-family: "BrownFtv-Light";
   text-align: justify;
 
   background-color: var(--bg);
@@ -47,6 +47,8 @@ body {
 h1 {
   color: var(--blue);
   text-align: center;
+  letter-spacing: 4px;
+  font-size: 24px;
 }
 
 h1+hr {
