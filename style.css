@@ -126,6 +126,12 @@ textarea {
   text-align: center;
 }
 
+#bigImage {
+  display: none;
+  z-index: 4;
+  max-width: 490px;
+}
+
 #imagebox {
   display: none;
   margin: auto auto auto auto;
@@ -138,7 +144,7 @@ textarea {
 
 #closeImagebox {
   display: none;
-  z-index: 4;
+  z-index: 5;
   width: 20px;
   height: 20px;
   position: absolute;
