@@ -5,7 +5,7 @@ CREATE TABLE messages (
   name VARCHAR(50) NOT NULL,
   message VARCHAR(1000) NOT NULL,
   image VARCHAR(200),
-  thumbnail LONGBLOB(200)
+  thumbnail VARCHAR(200)
 );
 
 INSERT INTO messages(name, message, image) VALUES
