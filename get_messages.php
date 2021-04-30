@@ -11,7 +11,7 @@ if (!$con) {
 
 $sql="SELECT * FROM messages";
 $result = mysqli_query($con,$sql);
-echo $result
+
 echo "<table>
 <tr>
 <th>name</th>
