@@ -153,9 +153,14 @@ textarea {
   position: absolute;
   top: 0px;
   right: 0px;
+  cursor:pointer;
 }
 
 #messages, #messages td, #messages th {
   border-collapse: collapse;
   border: solid 1px;
+}
+
+.msgimage {
+  cursor:pointer;
 }
