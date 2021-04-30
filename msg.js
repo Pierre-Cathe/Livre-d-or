@@ -5,6 +5,6 @@ window.onload = function getMsg() {
       document.getElementById("msg_container").innerHTML = this.responseText;
     }
   };
-  xmlhttp.open("GET","get_messages.php,true);
+  xmlhttp.open("GET","get_messages.php",true);
   xmlhttp.send();
 }
