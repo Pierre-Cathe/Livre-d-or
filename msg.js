@@ -13,8 +13,21 @@ function showBigImage(path) {
   overlay = document.getElementById("overlay");
   imagebox = document.getElementById("imagebox");
   closeImagebox = document.getElementById("closeImagebox");
+  bigImage = document.getElementById("bigImage");
   overlay.style.display = "block";
   imagebox.style.display = "block";
   closeImagebox.style.display = "block";
   bigImage.src = path;
+  bigImage.style.display = "block";
+}
+
+function hideBigImage() {
+  overlay = document.getElementById("overlay");
+  imagebox = document.getElementById("imagebox");
+  closeImagebox = document.getElementById("closeImagebox");
+  bigImage = document.getElementById("bigImage");
+  overlay.style.display = "none";
+  imagebox.style.display = "none";
+  closeImagebox.style.display = "none";
+  bigImage.style.display = "none";
 }
