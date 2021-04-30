@@ -111,7 +111,7 @@ textarea {
   height: 100%;
 }
 
-#messages {
+#messages, #messages td, #messages th {
   border-collapse: collapse;
   border: solid 1px;
 }
