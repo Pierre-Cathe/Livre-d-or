@@ -12,7 +12,7 @@ if (!$con) {
 $sql="SELECT * FROM messages";
 $result = mysqli_query($con,$sql);
 
-echo "<table>
+echo "<table id='messages'>
 <tr>
 <th>name</th>
 <th>message</th>

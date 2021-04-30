@@ -110,3 +110,8 @@ textarea {
   width: 100%;
   height: 100%;
 }
+
+#messages {
+  border-collapse: collapse;
+  border: solid 1px;
+}
