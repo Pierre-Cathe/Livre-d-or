@@ -22,7 +22,7 @@ while($row = mysqli_fetch_array($result)) {
   echo "<tr>";
   echo "<td>" . $row['name'] . "</td>";
   echo "<td>" . $row['message'] . "</td>";
-  echo "<td><a href='" . $row['image'] . "<img src='" . $row['thumbnail'] . "'/></a></td>";
+  echo "<td><a href='" . $row['image'] . "'><img src='" . $row['thumbnail'] . "'/></a></td>";
   echo "</tr>";
 }
 echo "</table>";
