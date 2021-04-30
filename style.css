@@ -133,6 +133,7 @@ textarea {
 }
 
 #imagebox {
+  position: fixed;
   display: none;
   margin: auto auto auto auto;
   z-index: 3;
