@@ -135,7 +135,9 @@ textarea {
 #imagebox {
   position: fixed;
   display: none;
-  margin: auto auto auto auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   width: 500px;
   height: 300px;
