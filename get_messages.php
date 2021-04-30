@@ -9,7 +9,7 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT * FROM messages;
+$sql="SELECT * FROM messages";
 $result = mysqli_query($con,$sql);
 
 echo "<table>
