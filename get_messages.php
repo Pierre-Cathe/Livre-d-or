@@ -4,21 +4,19 @@
 
 <?php
 
-$con = mysqli_connect('localhost','cassecouille','plantemangagourdexylophone','cassecouille');
+$con = mysqli_connect('localhost','cassecouille','plantemangagourdexylophone','cassecouille', '/media/pi/external_drive/mysql_data/mysql.sock', 3006);
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT * FROM messages;
+$sql="SELECT * FROM messages";
 $result = mysqli_query($con,$sql);
 
 echo "<table>
 <tr>
-<th>Nom</th>
-<th>Message</th>
-<th>Age</th>
-<th>Hometown</th>
-<th>Job</th>
+<th>name</th>
+<th>message</th>
+<th>image</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
   echo "<tr>";
