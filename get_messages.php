@@ -4,7 +4,7 @@
 
 <?php
 
-include "db_connect.php"
+include "db_connect.php";
 
 $sql="SELECT * FROM messages";
 $result = mysqli_query($con,$sql);
