@@ -15,8 +15,8 @@ move_uploaded_file($thumbnail, $new_thumbnail);
 
 include "db_connect.php";
 
-error_log("INSERT INTO messages VALUES('" . $name . "', '" . $message . "', '" . $new_image . "', '" . $new_thumbnail . "');");
-$sql="INSERT INTO messages VALUES('" . $name . "', '" . $message . "', '" . $new_image . "', '" . $new_thumbnail . "');";
+error_log("INSERT INTO messages VALUES('$name', '$message', '$new_image', '$new_thumbnail')");
+$sql="INSERT INTO messages VALUES('$name', '$message', '$new_image', '$new_thumbnail')";
 $result = mysqli_query($con,$sql);
 
 mysqli_close($con);
