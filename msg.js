@@ -44,19 +44,17 @@ function sendMsg() {
 
   image = document.getElementById("image").files[0];
 
-  var bigImage;
-  var thumbnail;
   ImageTools.resize(image, {
     width: 4000,
     height: 4000
   }, function(blob, didItResize) {
-  fd.append("image", bigImage);
+  fd.append("image", blob);
   });
   ImageTools.resize(image, {
     width: 400,
     height: 400
   }, function(blob, didItResize) {
-  fd.append("thumbnail", thumbnail);
+  fd.append("thumbnail", blob);
   });
 
   debugger;
