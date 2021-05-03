@@ -59,6 +59,8 @@ function sendMsg() {
   fd.append("thumbnail", thumbnail);
   });
 
+  debugger;
+
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
