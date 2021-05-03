@@ -1,4 +1,4 @@
-window.onload = function getMsg() {
+function getMsg() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -8,6 +8,8 @@ window.onload = function getMsg() {
   xmlhttp.open("GET", "get_messages.php", true);
   xmlhttp.send();
 }
+
+window.onload = getMsg();
 
 function showBigImage(path) {
   overlay = document.getElementById("overlay");
@@ -30,4 +32,36 @@ function hideBigImage() {
   imagebox.style.display = "none";
   closeImagebox.style.display = "none";
   bigImage.style.display = "none";
+}
+
+function sendMsg() {
+  name = document.getElementById("name").value;
+  message = document.getElementById("message").value;
+
+  fd = new FormData();
+  fd.append("name", name);
+  fd.append("message", message);
+
+  image = document.getElementById("image").files[0];
+
+  var bigImage;
+  var thumbnail;
+  ImageTools.resize(image, {
+    width: 4000,
+    height: 4000
+  }, function(blob, didItResize) {
+  fd.append("image", bigImage);
+  });
+  ImageTools.resize(image, {
+    width: 400,
+    height: 400
+  }, function(blob, didItResize) {
+  fd.append("thumbnail", thumbnail);
+  });
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("POST", "send_messages.php", true);
+  // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send(fd);
+  getMsg();
 }

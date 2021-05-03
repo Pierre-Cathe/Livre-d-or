@@ -2,10 +2,10 @@ DROP TABLE IF EXISTS messages;
 
 CREATE TABLE messages (
   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(50) NOT NULL,
-  message VARCHAR(1000) NOT NULL,
-  image VARCHAR(200),
-  thumbnail VARCHAR(200)
+  name VARCHAR(MAX) NOT NULL,
+  message VARCHAR(MAX) NOT NULL,
+  image VARCHAR(MAX),
+  thumbnail VARCHAR(MAX)
 );
 
 INSERT INTO messages(name, message, image, thumbnail) VALUES
