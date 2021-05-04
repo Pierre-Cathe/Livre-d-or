@@ -6,7 +6,7 @@ CREATE TABLE messages (
   message VARCHAR(MAX) NOT NULL,
   image VARCHAR(MAX),
   thumbnail VARCHAR(MAX),
-  upload_date DATETIME DEFAULT CURRENT_TIMESTAMP
+  upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO messages(name, message, image, thumbnail) VALUES
