@@ -16,8 +16,8 @@ while($row = mysqli_fetch_array($result)) {
   {
     echo "<td><img class='msgimage' src='" . $row['thumbnail'] . "' onclick='showBigImage(\"" . $row['image'] . "\")'/></td>";
   }
-  echo "<p>" . $row['message'] . "</p>";
-  echo "<p>" . $row['name'] . "</p>";
+  echo "<p class='msgbody'>" . $row['message'] . "</p>";
+  echo "<p class='msgname'>" . $row['name'] . "</p>";
   echo "</div>";
 }
 echo "</div>";

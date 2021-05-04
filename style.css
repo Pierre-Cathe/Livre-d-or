@@ -165,3 +165,11 @@ textarea {
   background-color: var(--msg-bg);
   border-radius: 5px;
 }
+
+.msgname {
+  text-align: right;
+}
+
+.msgname:before {
+  content: "-";
+}
