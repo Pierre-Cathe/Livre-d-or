@@ -9,7 +9,7 @@ function getMsg() {
   xmlhttp.send();
   resetForm();
 
-  document.querySelectorAll('.msgimage').foreach(function(img) {
+  document.querySelectorAll('.msgimage').forEach(function(img) {
     img.onload = function() {
       var height = img.height;
       var width = img.width;
@@ -19,7 +19,6 @@ function getMsg() {
       else {
         img.className += " portrait";
       }
-      debugger;
     }
   });
 }
