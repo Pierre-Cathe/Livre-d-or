@@ -65,5 +65,5 @@ function doSend() {
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
-  setTimeout(getMsg(), 2000);
+  setTimeout(getMsg(), 10000);
 }
