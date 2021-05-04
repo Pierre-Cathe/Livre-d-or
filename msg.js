@@ -9,6 +9,8 @@ function getMsg() {
   xmlhttp.send();
   resetForm();
 
+  debugger;
+
   document.querySelectorAll('.msgimage').forEach(function(img) {
     img.onload = function() {
       var height = img.height;
