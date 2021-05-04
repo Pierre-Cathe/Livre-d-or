@@ -7,12 +7,13 @@ $message = $_POST["message"];
 // get the temporary name that PHP gave to the uploaded file
 $image = $_FILES["image"]["tmp_name"];
 $new_filename = uniqid(rand(), true);
-$new_image = "/var/www/casse-couille.fr/user_images/" . $new_filename;
+$new_image = "user_images/" . $new_filename;
 move_uploaded_file($image, $new_image);
+chmod($new_image, 0777);
 $thumbnail = $_FILES["thumbnail"]["tmp_name"];
-$new_thumbnail = "/var/www/casse-couille.fr/user_images/thumbnails/t_" . $new_filename;
+$new_thumbnail = "user_images/thumbnails/t_" . $new_filename;
 move_uploaded_file($thumbnail, $new_thumbnail);
-
+chmod($new_thumbnail, 0777);
 include "db_connect.php";
 
 error_log("INSERT INTO messages(name, message, image, thumbnail) VALUES('$name', '$message', '$new_image', '$new_thumbnail');");
