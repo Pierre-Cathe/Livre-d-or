@@ -18,5 +18,6 @@ include "db_connect.php";
 error_log("INSERT INTO messages VALUES('$name', '$message', '$new_image', '$new_thumbnail');");
 $sql="INSERT INTO messages VALUES('$name', '$message', '$new_image', '$new_thumbnail');";
 $result = mysqli_query($con,$sql);
+error_log(print_r(mysqli_error($con), true));
 mysqli_close($con);
 ?>
