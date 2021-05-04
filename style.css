@@ -165,3 +165,8 @@ textarea {
 .msgimage {
   cursor:pointer;
 }
+
+.message {
+  background-color: var(--msg-bg);
+  border-radius: 5px;
+}
