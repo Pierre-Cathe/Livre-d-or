@@ -19,6 +19,7 @@ function getMsg() {
       else {
         img.className += " portrait";
       }
+      debugger;
     }
   });
 }
