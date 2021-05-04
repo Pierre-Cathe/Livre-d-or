@@ -3,8 +3,8 @@ error_log(print_r($_FILES, true));
 error_log(print_r($_POST, true));
 $name = $_POST["name"];
 $message = $_POST["message"];
-$new_image = NULL
-$new_thumbnail = NULL
+$new_image = NULL;
+$new_thumbnail = NULL;
 
 if (array_key_exists("image"), $_FILES)
 {
