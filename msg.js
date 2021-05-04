@@ -44,20 +44,25 @@ function sendMsg() {
   fd.append("message", message);
 
   image = document.getElementById("image").files[0];
-  debugger;
-  ImageTools.resize(image, {
-    width: 4000,
-    height: 4000
-  }, function(blob, didItResize) {
-  fd.append("image", blob);
-  });
-  ImageTools.resize(image, {
-    width: 400,
-    height: 400
-  }, function(blob, didItResize) {
-  fd.append("thumbnail", blob);
-  doSend()
-  });
+  if (typeof image !== 'undefined') {
+    ImageTools.resize(image, {
+      width: 4000,
+      height: 4000
+    }, function(blob, didItResize) {
+    fd.append("image", blob);
+    });
+    ImageTools.resize(image, {
+      width: 400,
+      height: 400
+    }, function(blob, didItResize) {
+    fd.append("thumbnail", blob);
+    doSend()
+    });
+  }
+  else {
+    doSend();
+  }
+
 
   resetForm();
 }
