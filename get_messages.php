@@ -9,20 +9,18 @@ include "db_connect.php";
 $sql="SELECT * FROM messages ORDER BY upload_date DESC";
 $result = mysqli_query($con,$sql);
 
-echo "<table id='messages'>
-<tr>
-<th>name</th>
-<th>message</th>
-<th>image</th>
-</tr>";
+echo "<div id='messages'>";
 while($row = mysqli_fetch_array($result)) {
-  echo "<tr>";
-  echo "<td>" . $row['name'] . "</td>";
-  echo "<td>" . $row['message'] . "</td>";
-  echo "<td><img class='msgimage' src='" . $row['thumbnail'] . "' onclick='showBigImage(\"" . $row['image'] . "\")'/></td>";
-  echo "</tr>";
+  echo "<div class='message'>";
+  if (!is_null($row['image']))
+  {
+    echo "<td><img class='msgimage' src='" . $row['thumbnail'] . "' onclick='showBigImage(\"" . $row['image'] . "\")'/></td>";
+  }
+  echo "<p>" . $row['message'] . "</p>";
+  echo "<p>" . $row['name'] . "</p>";
+  echo "</div>";
 }
-echo "</table>";
+echo "</div>";
 mysqli_close($con);
 ?>
 </body>
