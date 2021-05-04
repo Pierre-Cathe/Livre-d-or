@@ -157,11 +157,6 @@ textarea {
   cursor:pointer;
 }
 
-#messages, #messages td, #messages th {
-  border-collapse: collapse;
-  border: solid 1px;
-}
-
 .msgimage {
   cursor:pointer;
 }
