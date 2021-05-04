@@ -3,27 +3,23 @@ function getMsg() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("msg_container").innerHTML = this.responseText;
+      document.querySelectorAll('.msgimage').forEach(function(img) {
+        img.onload = function() {
+          var height = img.height;
+          var width = img.width;
+          if (width > height) {
+            img.className += " paysage";
+          }
+          else {
+            img.className += " portrait";
+          }
+        }
+      });
     }
   };
   xmlhttp.open("GET", "get_messages.php", true);
   xmlhttp.send();
   resetForm();
-
-  debugger;
-
-  document.querySelectorAll('.msgimage').forEach(function(img) {
-    img.onload = function() {
-      var height = img.height;
-      var width = img.width;
-      if (width > height) {
-        img.className += " paysage";
-      }
-      else {
-        img.className += " portrait";
-      }
-      debugger;
-    }
-  });
 }
 
 window.onload = getMsg();
