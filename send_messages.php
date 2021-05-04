@@ -7,10 +7,10 @@ $message = $_POST["message"];
 // get the temporary name that PHP gave to the uploaded file
 $image = $_FILES["image"]["tmp_name"];
 $new_filename = uniqid(rand(), true);
-$new_image = "user_images/" . $new_filename;
+$new_image = "/var/www/casse-couille.fr/user_images/" . $new_filename;
 move_uploaded_file($image, $new_image);
 $thumbnail = $_FILES["thumbnail"]["tmp_name"];
-$new_thumbnail = "user_images/thumbnails/t_" . $new_filename;
+$new_thumbnail = "/var/www/casse-couille.fr/user_images/thumbnails/t_" . $new_filename;
 move_uploaded_file($thumbnail, $new_thumbnail);
 
 include "db_connect.php";

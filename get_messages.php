@@ -6,7 +6,7 @@
 
 include "db_connect.php";
 
-$sql="SELECT * FROM messages";
+$sql="SELECT * FROM messages ORDER BY upload_date DESC";
 $result = mysqli_query($con,$sql);
 
 echo "<table id='messages'>
