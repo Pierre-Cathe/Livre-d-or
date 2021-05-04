@@ -7,6 +7,7 @@ function getMsg() {
   };
   xmlhttp.open("GET", "get_messages.php", true);
   xmlhttp.send();
+  resetForm();
 }
 
 window.onload = getMsg();
@@ -43,7 +44,7 @@ function sendMsg() {
   fd.append("message", message);
 
   image = document.getElementById("image").files[0];
-
+  debugger;
   ImageTools.resize(image, {
     width: 4000,
     height: 4000
@@ -57,6 +58,15 @@ function sendMsg() {
   fd.append("thumbnail", blob);
   doSend()
   });
+
+  resetForm();
+}
+
+function resetForm() {
+  document.getElementById("name").value = null;
+  document.getElementById("message").value = null;
+  document.getElementById("image").value = null;
+  document.getElementById("filename").innerHTML = "";
 }
 
 function doSend() {
@@ -65,4 +75,13 @@ function doSend() {
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
   setTimeout(function() {getMsg()}, 2000);
+}
+
+function echoFileName() {
+  try {
+    var fileName = document.getElementById("image").files[0].name;
+    document.getElementById("filename").innerHTML = fileName;
+  } catch (e) {
+    document.getElementById("filename").innerHTML = "";
+  }
 }
