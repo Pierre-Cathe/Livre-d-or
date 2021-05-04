@@ -43,7 +43,7 @@ function sendMsg() {
   fd.append("message", message);
 
   image = document.getElementById("image").files[0];
-  debugger;
+  
   ImageTools.resize(image, {
     width: 4000,
     height: 4000
@@ -59,7 +59,7 @@ function sendMsg() {
   });
 }
 
-function doSend {
+function doSend() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
