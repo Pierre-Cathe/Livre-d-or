@@ -164,6 +164,7 @@ textarea {
 .message {
   background-color: var(--msg-bg);
   border-radius: 5px;
+  padding: 5px;
 }
 
 .msgname {
