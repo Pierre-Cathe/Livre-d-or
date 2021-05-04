@@ -171,5 +171,5 @@ textarea {
 }
 
 .msgname:before {
-  content: "-";
+  content: "- ";
 }
