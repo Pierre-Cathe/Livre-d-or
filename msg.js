@@ -55,8 +55,11 @@ function sendMsg() {
     height: 400
   }, function(blob, didItResize) {
   fd.append("thumbnail", blob);
+  doSend()
   });
-  debugger;
+}
+
+function doSend {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
