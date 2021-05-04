@@ -175,3 +175,12 @@ textarea {
 .msgname:before {
   content: "- ";
 }
+
+.portrait {
+  float: right;
+}
+
+.paysage {
+  margin-left: auto;
+  margin-right: auto;
+}

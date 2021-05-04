@@ -8,6 +8,19 @@ function getMsg() {
   xmlhttp.open("GET", "get_messages.php", true);
   xmlhttp.send();
   resetForm();
+
+  document.querySelectorAll('.msgimage').foreach(function(img) {
+    img.onload = function() {
+      var height = img.height;
+      var width = img.width;
+      if (width > height) {
+        img.className += " paysage";
+      }
+      else {
+        img.className += " portrait";
+      }
+    }
+  });
 }
 
 window.onload = getMsg();
