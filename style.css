@@ -166,6 +166,7 @@ textarea {
   border-radius: 5px;
   padding: 5px;
   margin: 10px 0px 10px 0px;
+  overflow: auto;
 }
 
 .msgname {
@@ -174,6 +175,11 @@ textarea {
 
 .msgname:before {
   content: "- ";
+}
+
+.msgbody {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .portrait {
