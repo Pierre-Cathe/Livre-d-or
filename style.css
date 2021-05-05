@@ -87,12 +87,19 @@ footer img {
 
 /* Style form */
 
+label {
+  font-size: 1em;
+}
+
+input
+
 input[type="file"] {
     display: none;
 }
 
-.right {
+.label_cell {
   text-align: right;
+  width: 30em;
 }
 
 #bouton-parcourir {
