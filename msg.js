@@ -26,6 +26,22 @@ function getMsg() {
 
 window.onload = getMsg();
 
+window.onscroll = function() {
+  if (document.documentElement.scrollTop > 50)
+  {
+    document.getElementById("scroll-to-top").style.visibility = "visible";
+    document.getElementById("scroll-to-top").style.opacity = 1;
+  }
+  else {
+    document.getElementById("scroll-to-top").style.visibility = "hidden";
+    document.getElementById("scroll-to-top").style.opacity = 0;
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function showBigImage(path) {
   overlay = document.getElementById("overlay");
   imagebox = document.getElementById("imagebox");
