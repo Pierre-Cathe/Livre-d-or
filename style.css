@@ -68,7 +68,11 @@ h1+hr {
 
 footer {
   background-image: url("img/fond.svg");
-  
+  background-size: cover;
+}
+
+footer img {
+  width: 50%;
 }
 
 
