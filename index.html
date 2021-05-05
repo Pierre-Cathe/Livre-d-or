@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -14,24 +14,31 @@
       <img id="closeImagebox" src="img/cross.png" onclick="hideBigImage()"/>
     </div>
     <div id="container">
-      <img id="banniere" src="img/banniere.png" alt="">
+      <img id="banniere" src="img/banniere.png" />
+      <div id="pictos">
+        <img id="pictoL" src="img/pictoL.svg" />
+        <img id="pictoP" src="img/pictoP.svg" />
+      </div>
       <h1>BIENVENUE SUR LE LIVRE D'OR<br/>DU MARIAGE DE MARIANNE ET THIBAUT</h1>
       <hr/>
-      <p> Casse-couille… n’est pas une insulte. C’est ici l’histoire de l’arroseur arrosé. Une blague familiale veut que l’on utilise une adresse casse-couille.fr pour écrire anonymement ce qu’on pense sur tous les sujets !
-  À vous de vous emparer de cette adresse pour écrire librement et sans censure des petits mots à Marianne et Thibaut. Ecrivez plusieurs fois, ajoutez, des photos, des images, ce que vous voulez….
-  Ce site sera révélé et offert le 14 août à minuit !</p>
+      <p> Casse-couille… n’est pas une insulte. C’est ici l’histoire de l’arroseur arrosé. Une blague familiale veut que l’on utilise une adresse casse-couille.fr pour écrire anonymement ce qu’on pense sur tous les sujets !</p>
+      <p>À vous de vous emparer de cette adresse pour écrire librement et sans censure des petits mots à Marianne et Thibaut. Ecrivez plusieurs fois, ajoutez, des photos, des images, ce que vous voulez….</p>
+      <p>Ce site sera révélé et offert le 14 août à minuit !</p>
+
+      <h1 id="form_title">LAISSEZ VOTRE MESSAGE</h1>
+      <hr/>
       <form action="" method="get" class="form">
-        <table>
-          <tr class="form">
-            <td class="label_cell"><label for="name">Votre nom :</label></td>
-            <td class="input_cell"><input type="text" name="name" id="name" required></td>
-          </tr>
-          <tr class="form">
-            <td class="label_cell"><label for="message">Votre message<br/>pour les mariés : </label></td>
-            <td class="input_cell"><textarea name="message" id="message" required></textarea></td>
-          </tr>
-        </table>
-        <div class="form">
+        <div class="aligned_box" >
+          <div class="aligned_label">
+            <label for="name">Votre nom :</label>
+            <label for="message">Votre message<br/>pour les mariés : </label>
+          </div>
+          <div class="aligned_inputs">
+            <input type="text" name="name" id="name" required>
+            <textarea rows="4" name="message" id="message" required></textarea>
+          </div>
+        </div>
+        <div id="parcourir-box">
           <label for="image">
             Joindre une photo (optionnel):
           </label>
@@ -41,10 +48,10 @@
           </label>
           <span id="filename"></span>
         </div>
-        <div class="form">
-          <button type="button" onclick="sendMsg()">Envoyer !</button>
-        </div>
+        <button id="bouton-envoyer" type="button" onclick="sendMsg()">ENVOYER !</button>
       </form>
+      <h1 id="msg_title">LIVRE D'OR</h1>
+      <hr/>
       <div id="msg_container">
       </div>
     </div>

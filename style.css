@@ -49,12 +49,31 @@ body {
   overflow: hidden;
 }
 
+#pictos {
+  width: 8em;
+  margin: 5em auto 1.5em auto;
+  overflow: hidden;
+}
+
+#pictos img {
+  width: 3em;
+}
+
+#pictoL {
+  float: left;
+}
+
+#pictoP {
+  float: right;
+}
+
 h1 {
   color: var(--blue);
   text-align: center;
   letter-spacing: 4px;
   font-size: 24px;
 }
+
 
 h1+hr {
   border: none;
@@ -87,12 +106,38 @@ footer img {
 
 /* Style form */
 
-label {
-  font-size: 1em;
+#form_title {
+  margin-top: 2em;
 }
 
-input {
-  
+.aligned_box {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+
+.aligned_label {
+  text-align: right;
+  width: 30%;
+  display: block;
+  float: left;
+}
+
+.aligned_label * {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.aligned_inputs {
+  text-align: left;
+  width: 67%;
+  float: right;
+  padding-right: 1%;
+}
+
+.aligned_inputs * {
+  margin-bottom: 10px;
 }
 
 input[type="file"] {
@@ -111,22 +156,25 @@ input[type="file"] {
   padding: 4px 20px 4px 20px;
 }
 
-form {
-  text-align: center;
+#parcourir-box {
+  margin-bottom: 1em;
 }
 
-table {
+#bouton-envoyer {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  /* border: solid 1px; */
+  color: white;
+  background-color: var(--blue);
+  border-radius: 3px;
+  padding: 4px 20px 4px 20px;
+  font-family: "BrownFtv-Light";
+  border: none;
+  font-size: 1em;
 }
 
-td {
-  /* border: solid 1px; */
-}
-
-.form td {
-  margin: 0 0 20px 0
+form {
+  text-align: center;
 }
 
 input[type="text"] {
@@ -139,6 +187,10 @@ textarea {
 }
 
 /* Style messages */
+
+#msg_title {
+  margin-top: 4em;
+}
 
 #overlay {
   display: none;
