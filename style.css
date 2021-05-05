@@ -182,8 +182,13 @@ textarea {
   margin-left: 10px;
 }
 
+.msgtext {
+  max-width: 65%;
+}
+
 .portrait {
   float: right;
+  max-width: 25%
 }
 
 .paysage {
