@@ -9,9 +9,11 @@ function getMsg() {
           var width = img.width;
           if (width > height) {
             img.className += " paysage";
+            img.nextSibling.className += " paysage";
           }
           else {
             img.className += " portrait";
+            img.nextSibling.className += " portrait";
           }
         }
       });
