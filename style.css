@@ -35,9 +35,6 @@ body {
                      repeat-y;
   background-position: left top,
                        right top;
-
-  min-height: 100%;
-  position: relative;
   margin: 0;
 }
 
@@ -47,7 +44,9 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: auto !important;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 h1 {
@@ -77,6 +76,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 50px;
 }
 
 footer img {
