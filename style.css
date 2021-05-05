@@ -202,7 +202,7 @@ textarea {
 
 img.portrait {
   float: right;
-  max-width: 35%
+  margin: 40px;
 }
 
 .paysage {
@@ -212,5 +212,5 @@ img.portrait {
 }
 
 .msgtext.portrait {
-  max-width: 62%;
+  margin: 10px;
 }
