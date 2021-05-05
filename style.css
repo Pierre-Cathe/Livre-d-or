@@ -66,6 +66,11 @@ h1+hr {
   margin-right: auto;
 }
 
+footer {
+  background-image: url("img/fond.svg");
+  
+}
+
 
 /* Style form */
 
