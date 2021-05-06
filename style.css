@@ -159,6 +159,7 @@ input[type="file"] {
   background-color: var(--blue);
   border-radius: 3px;
   padding: 4px 20px 4px 20px;
+  margin: 0.5em;
 }
 
 #parcourir-box {
