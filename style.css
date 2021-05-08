@@ -273,6 +273,7 @@ textarea {
 .msgbody {
   margin-right: 10px;
   margin-left: 10px;
+  hyphens: auto;
 }
 
 img.portrait {
