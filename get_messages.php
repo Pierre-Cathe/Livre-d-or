@@ -12,7 +12,7 @@ $result = mysqli_query($con,$sql);
 echo "<div id='messages'>";
 while($row = mysqli_fetch_array($result)) {
   echo "<div class='message'>";
-  echo "<div class='messageContainer'>"
+  echo "<div class='messageContainer'>";
   if (!is_null($row['image']))
   {
     echo "<img class='msgimage' src='" . $row['thumbnail'] . "' onclick='showBigImage(\"" . $row['image'] . "\")'/>";
@@ -21,7 +21,7 @@ while($row = mysqli_fetch_array($result)) {
   echo "<p class='msgbody'>" . $row['message'] . "</p>";
   echo "<p class='msgname'>" . $row['name'] . "</p>";
   echo "</div>";
-  echo "</div>"
+  echo "</div>";
   echo "</div>";
 }
 echo "</div>";
