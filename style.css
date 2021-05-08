@@ -167,7 +167,7 @@ input[type="file"] {
 }
 
 #bouton-envoyer {
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   color: white;
@@ -183,7 +183,7 @@ input[type="file"] {
 /* Smartphones (portrait) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   form {
-    text-size-adjust: 230%;
+    text-size-adjust: 220%;
   }
 }
 
