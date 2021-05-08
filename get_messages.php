@@ -13,8 +13,9 @@ echo "<div id='messages'>";
 while($row = mysqli_fetch_array($result)) {
   echo "<div class='message'>";
   echo "<div class='messageContainer'>";
-  if (!is_null($row['image']))
+  if (!is_null($row['image']) && strcmp($row['image'], "") != 0)
   {
+
     echo "<img class='msgimage' src='" . $row['thumbnail'] . "' onclick='showBigImage(\"" . $row['image'] . "\")'/>";
   }
   echo "<div class='msgtext'>";
