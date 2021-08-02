@@ -271,6 +271,11 @@ textarea {
   content: "- ";
 }
 
+.timestamp {
+  font-size: 1em;
+  font-style: italic;
+}
+
 .msgbody {
   margin-right: 10px;
   margin-left: 10px;
