@@ -258,7 +258,7 @@ textarea {
   background-color: var(--msg-bg);
   border-radius: 5px;
   padding: 5px;
-  margin: 10px 0px 10px 0px;
+  margin: 15px 0px 15px 0px;
   overflow: auto;
 }
 
