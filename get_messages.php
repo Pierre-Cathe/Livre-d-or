@@ -25,30 +25,42 @@ while($row = mysqli_fetch_array($result)) {
   switch (date('n', $time)) {
     case "1":
       $month = "jan.";
+      break;
     case "2":
       $month = "fev.";
+      break;
     case "3":
       $month = "mar.";
+      break;
     case "4":
       $month = "avr.";
+      break;
     case "5":
       $month = "mai";
+      break;
     case "6":
       $month = "juin";
+      break;
     case "7":
       $month = "juil.";
+      break;
     case "8":
       $month = "août";
+      break;
     case "9":
       $month = "sep.";
+      break;
     case "10":
       $month = "oct.";
+      break;
     case "11":
       $month = "nov.";
+      break;
     case "12":
       $month = "dec.";
+      break;
   }
-  echo "<p class='msgname'>" . $row['name'] . ", <span class='timestamp'>le " . date('j/', $time) . $month . " à " . date('G:i', $time) . "</span></p>";
+  echo "<p class='msgname'>" . $row['name'] . ", <span class='timestamp'>le " . date('j ', $time) . $month . " à " . date('G:i', $time) . "</span></p>";
   echo "</div>";
   echo "</div>";
   echo "</div>";
