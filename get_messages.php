@@ -60,7 +60,7 @@ while($row = mysqli_fetch_array($result)) {
       $month = "dec.";
       break;
   }
-  echo "<p class='msgname'>" . $row['name'] . ", <span class='timestamp'>le " . date('j ', $time) . $month . " à " . date('G:i', $time) . "</span></p>";
+  echo "<p class='msgname'>" . $row['name'] . ", <span class='timestamp'> " . date('j ', $time) . $month . " - " . date('G:i', $time) . "</span></p>";
   echo "</div>";
   echo "</div>";
   echo "</div>";
