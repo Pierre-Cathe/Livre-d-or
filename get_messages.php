@@ -21,7 +21,34 @@ while($row = mysqli_fetch_array($result)) {
   echo "<div class='msgtext'>";
   echo "<p class='msgbody'>" . $row['message'] . "</p>";
   $time = strtotime($row['upload_date']);
-  echo "<p class='msgname'>" . $row['name'] . ", <span class='timestamp'>le " . date('j/n', $time) . " à " . date('G:i', $time) . "</span></p>";
+  $month = "";
+  switch (date('n', $time)) {
+    case "1":
+      $month = "jan.";
+    case "2":
+      $month = "fev.";
+    case "3":
+      $month = "mar.";
+    case "4":
+      $month = "avr.";
+    case "5":
+      $month = "mai";
+    case "6":
+      $month = "juin";
+    case "7":
+      $month = "juil.";
+    case "8":
+      $month = "août";
+    case "9":
+      $month = "sep.";
+    case "10":
+      $month = "oct.";
+    case "11":
+      $month = "nov.";
+    case "12":
+      $month = "dec.";
+  }
+  echo "<p class='msgname'>" . $row['name'] . ", <span class='timestamp'>le " . date('j/', $time) . $month . " à " . date('G:i', $time) . "</span></p>";
   echo "</div>";
   echo "</div>";
   echo "</div>";
