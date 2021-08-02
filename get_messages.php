@@ -20,7 +20,8 @@ while($row = mysqli_fetch_array($result)) {
   }
   echo "<div class='msgtext'>";
   echo "<p class='msgbody'>" . $row['message'] . "</p>";
-  echo "<p class='msgname'>" . $row['name'] . ", le " . $row['upload_date'] . "</p>";
+  $time = strtotime($row['upload_date'])
+  echo "<p class='msgname'>" . $row['name'] . ", le " . $time->format('j/n') . " à " . $time->format('G:i') . "</p>";
   echo "</div>";
   echo "</div>";
   echo "</div>";
