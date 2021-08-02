@@ -21,7 +21,7 @@ while($row = mysqli_fetch_array($result)) {
   echo "<div class='msgtext'>";
   echo "<p class='msgbody'>" . $row['message'] . "</p>";
   $time = strtotime($row['upload_date']);
-  echo "<p class='msgname'>" . $row['name'] . ", le " . $time->format('j/n') . " à " . $time->format('G:i') . "</p>";
+  echo "<p class='msgname'>" . $row['name'] . ", le " . date('j/n', $time) . " à " . date('G:i', $time) . "</p>";
   echo "</div>";
   echo "</div>";
   echo "</div>";
