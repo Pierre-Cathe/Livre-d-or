@@ -113,6 +113,8 @@ function doSend() {
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
   xmlhttp.onreadystatechange = function () {
+    console.log(xhr.readyState);
+    console.log(xhr.status);
     if (xhr.readyState === 4 && xhr.status === 200) {
       getMsg();
       statusDiv = document.getElementById("status");
