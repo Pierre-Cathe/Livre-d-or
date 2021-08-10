@@ -66,6 +66,8 @@ function hideBigImage() {
 }
 
 function sendMsg() {
+  statusDiv = document.getElementById("status");
+  statusDiv.innerHTML = "Envoi en cours...";
   name = document.getElementById("name").value;
   message = document.getElementById("message").value;
 
@@ -110,7 +112,13 @@ function doSend() {
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
-  setTimeout(function() {getMsg()}, 2000);
+  xmlhttp.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      getMsg();
+      statusDiv = document.getElementById("status");
+      statusDiv.innerHTML = "Message envoyé !";
+    }
+  }
 }
 
 function echoFileName() {
