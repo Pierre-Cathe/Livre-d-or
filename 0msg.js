@@ -67,8 +67,7 @@ function hideBigImage() {
 
 function sendMsg() {
   statusDiv = document.getElementById("status");
-  //statusDiv.innerHTML = "Envoi en cours...";
-  statusDiv.innerHTML = statusDiv.innerHTML + " " + "Envoi en cours...";
+  statusDiv.innerHTML = "Envoi en cours, ne fermez pas la page...";
   name = document.getElementById("name").value;
   message = document.getElementById("message").value;
 
@@ -79,9 +78,7 @@ function sendMsg() {
     fd.append("message", message);
 
     image = document.getElementById("image").files[0];
-    statusDiv.innerHTML = typeof image;
     if (typeof image !== 'undefined') {
-      statusDiv.innerHTML = statusDiv.innerHTML + " editing image";
       ImageTools.resize(image, {
         width: 4000,
         height: 4000
@@ -117,22 +114,14 @@ function resetForm() {
 
 function doSend() {
   var xmlhttp = new XMLHttpRequest();
-  for (var pair of fd.entries()) {
-    statusDiv.innerHTML = statusDiv.innerHTML + " " + pair[0]+ ', ' + pair[1];
-}
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
   xmlhttp.onreadystatechange = function () {
     statusDiv = document.getElementById("status");
-    statusDiv.innerHTML = statusDiv.innerHTML + " " + xmlhttp.readyState;
-    statusDiv.innerHTML = statusDiv.innerHTML + " " + xmlhttp.status;
-    console.log(xmlhttp.readyState)
-    console.log(xmlhttp.status)
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
       getMsg();
-      statusDiv.innerHTML = statusDiv.innerHTML + " " + "Message envoyé !";
-      //statusDiv.innerHTML = "Message envoyé !";
+      statusDiv.innerHTML = "Message envoyé !";
     }
   }
 }
