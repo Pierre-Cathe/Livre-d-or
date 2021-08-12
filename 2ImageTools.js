@@ -72,7 +72,6 @@ var ImageTools = (function () {
             var image = document.createElement('img');
 
             image.onload = function (imgEvt) {
-                debugger;
                 var width = image.width;
                 var height = image.height;
                 var isTooLarge = false;

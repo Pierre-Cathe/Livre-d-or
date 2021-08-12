@@ -82,27 +82,29 @@ function sendMsg() {
     statusDiv.innerHTML = typeof image;
     if (typeof image !== 'undefined') {
       statusDiv.innerHTML = statusDiv.innerHTML + " editing image";
-      debugger;
       ImageTools.resize(image, {
         width: 4000,
         height: 4000
       }, function(blob, didItResize) {
-        debugger;
       fd.append("image", blob);
       });
-      ImageTools.resize(image, {
-        width: 400,
-        height: 400
-      }, function(blob, didItResize) {
-        debugger;
-      fd.append("thumbnail", blob);
-      doSend()
-      });
+      setTimeout(function() {
+        ImageTools.resize(image, {
+          width: 400,
+          height: 400
+        }, function(blob, didItResize) {
+        fd.append("thumbnail", blob);
+        doSend()
+      });}, 1000);
+
     }
     else {
       doSend();
     }
-    resetForm();
+    setTimeout(function() {
+      resetForm();
+    }, 1500);
+
   }
 }
 
