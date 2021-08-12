@@ -87,12 +87,14 @@ function sendMsg() {
         width: 4000,
         height: 4000
       }, function(blob, didItResize) {
+        debugger;
       fd.append("image", blob);
       });
       ImageTools.resize(image, {
         width: 400,
         height: 400
       }, function(blob, didItResize) {
+        debugger;
       fd.append("thumbnail", blob);
       doSend()
       });
