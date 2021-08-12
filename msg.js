@@ -67,7 +67,7 @@ function hideBigImage() {
 
 function sendMsg() {
   statusDiv = document.getElementById("status");
-  statusDiv.innerHTML = "Envoi en cours...";
+  //statusDiv.innerHTML = "Envoi en cours...";
   name = document.getElementById("name").value;
   message = document.getElementById("message").value;
 
@@ -78,6 +78,7 @@ function sendMsg() {
     fd.append("message", message);
 
     image = document.getElementById("image").files[0];
+    statusDiv.innerHTML = typeof image;
     if (typeof image !== 'undefined') {
       ImageTools.resize(image, {
         width: 4000,
@@ -118,7 +119,7 @@ function doSend() {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
       getMsg();
       statusDiv = document.getElementById("status");
-      statusDiv.innerHTML = "Message envoyé !";
+      //statusDiv.innerHTML = "Message envoyé !";
     }
   }
 }
