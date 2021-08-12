@@ -1,4 +1,7 @@
 <?php
+
+include "db_connect.php";
+
 error_log(print_r($_FILES, true));
 error_log(print_r($_POST, true));
 $name = $con->real_escape_string($_POST["name"]);
@@ -20,8 +23,6 @@ if (array_key_exists("image", $_FILES))
   move_uploaded_file($thumbnail, $new_thumbnail);
   chmod($new_thumbnail, 0777);
 }
-
-include "db_connect.php";
 
 error_log("INSERT INTO messages(name, message, image, thumbnail) VALUES('$name', '$message', '$new_image', '$new_thumbnail');");
 $sql="INSERT INTO messages(name, message, image, thumbnail) VALUES('$name', '$message', '$new_image', '$new_thumbnail');";
