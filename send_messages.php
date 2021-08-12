@@ -11,6 +11,7 @@ if (array_key_exists("image", $_FILES))
   // get the temporary name that PHP gave to the uploaded file
   $image = $_FILES["image"]["tmp_name"];
   $new_filename = uniqid(rand(), true);
+  error_log(print_r($new_filename, true))
   $new_image = "user_images/" . $new_filename;
   move_uploaded_file($image, $new_image);
   chmod($new_image, 0777);
