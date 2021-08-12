@@ -68,6 +68,7 @@ function hideBigImage() {
 function sendMsg() {
   statusDiv = document.getElementById("status");
   //statusDiv.innerHTML = "Envoi en cours...";
+  statusDiv.innerHTML = statusDiv.innerHTML + " " + "Envoi en cours...";
   name = document.getElementById("name").value;
   message = document.getElementById("message").value;
 
@@ -114,11 +115,14 @@ function doSend() {
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
   xmlhttp.onreadystatechange = function () {
+    statusDiv = document.getElementById("status");
+    statusDiv.innerHTML = statusDiv.innerHTML + " " + xmlhttp.readyState;
+    statusDiv.innerHTML = statusDiv.innerHTML + " " + xmlhttp.status;
     console.log(xmlhttp.readyState)
     console.log(xmlhttp.status)
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
       getMsg();
-      statusDiv = document.getElementById("status");
+      statusDiv.innerHTML = statusDiv.innerHTML + " " + "Message envoyé !";
       //statusDiv.innerHTML = "Message envoyé !";
     }
   }
