@@ -82,6 +82,7 @@ function sendMsg() {
     statusDiv.innerHTML = typeof image;
     if (typeof image !== 'undefined') {
       statusDiv.innerHTML = statusDiv.innerHTML + " editing image";
+      debugger;
       ImageTools.resize(image, {
         width: 4000,
         height: 4000
