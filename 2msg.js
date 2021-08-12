@@ -81,6 +81,7 @@ function sendMsg() {
     image = document.getElementById("image").files[0];
     statusDiv.innerHTML = typeof image;
     if (typeof image !== 'undefined') {
+      statusDiv.innerHTML = statusDiv.innerHTML + " editing image";
       ImageTools.resize(image, {
         width: 4000,
         height: 4000
@@ -111,6 +112,9 @@ function resetForm() {
 
 function doSend() {
   var xmlhttp = new XMLHttpRequest();
+  for (var pair of fd.entries()) {
+    statusDiv.innerHTML = statusDiv.innerHTML + pair[0]+ ', ' + pair[1];
+}
   xmlhttp.open("POST", "send_messages.php", true);
   // xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(fd);
