@@ -1,8 +1,8 @@
 <?php
 error_log(print_r($_FILES, true));
 error_log(print_r($_POST, true));
-$name = $mysqli->real_escape_string($_POST["name"]);
-$message = $mysqli->real_escape_string($_POST["message"]);
+$name = $con->real_escape_string($_POST["name"]);
+$message = $con->real_escape_string($_POST["message"]);
 $new_image = NULL;
 $new_thumbnail = NULL;
 
