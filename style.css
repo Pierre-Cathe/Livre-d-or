@@ -280,6 +280,7 @@ textarea {
   margin-right: 10px;
   margin-left: 10px;
   hyphens: auto;
+  white-space: pre-wrap;
 }
 
 img.portrait {
